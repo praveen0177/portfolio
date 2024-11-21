@@ -84,16 +84,32 @@ $(document).ready(function(){
 
 
 // Function to open popup
+
+
 function openPopup(element) {
     const imgSrc = element.parentNode.parentNode.getAttribute("data-img");
     const title = element.parentNode.parentNode.getAttribute("data-title");
     const description = element.parentNode.parentNode.getAttribute("data-description");
+    const link = element.parentNode.parentNode.getAttribute("data-link");
+    const link2 = element.parentNode.parentNode.getAttribute("data-link2");
 
-    // Set popup content
-    document.querySelector("#popupWindow .popup-header").innerText = title;
-    document.querySelector("#popupWindow .popup-img").src = imgSrc;
-    document.querySelector("#popupWindow .popup-description").innerText = description;
+     // Set popup content
+     document.querySelector("#popupWindow .popup-header").innerText = title;
+     document.querySelector("#popupWindow .popup-img").src = imgSrc;
+    // Add description and link
+    const descriptionElement = document.querySelector("#popupWindow .popup-description");
+    descriptionElement.innerHTML = `
+        <p>${description}</p>
+        
+    `;
 
+     // Set the button to visit the website link
+     const visitButton = document.querySelector("#popupWindow .visit-button");
+     visitButton.onclick = () => window.open(link, "_blank");
+
+     // set the button to vist the website code
+     const visitButton2 = document.querySelector("#popupWindow .visit-button2");
+    visitButton2.onclick = () => window.open(link2, "_blank");
     // Show popup and backdrop
     document.getElementById("popupBackdrop").style.display = "block";
     document.getElementById("popupWindow").style.display = "block";

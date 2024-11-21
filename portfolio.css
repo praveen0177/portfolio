@@ -747,9 +747,24 @@ section .title::after{
     width: 50%;
 }
 .skills-content .right .php::before{
+    width: 60%;
+}
+.skills-content .right .boot::before{
+    width: 85%;
+}
+.skills-content .right .aws::before{
     width: 50%;
 }
-.skills-content .right .mysql::before{
+.skills-content .right .docker::before{
+    width: 80%;
+}
+.skills-content .right .k8s::before{
+    width: 70%;
+}
+.skills-content .right .jen::before{
+    width: 70%;
+}
+.skills-content .right .git::before{
     width: 85%;
 }
 .skills-content .right .wordpress::before{
@@ -1342,6 +1357,10 @@ section.quali {
     object-fit: cover; /* Crops the image to fit within the defined aspect ratio */
 }
 
+.pro_head{
+    color: #8adaff;
+}
+
 /* Overlay Effect on Hover */
 .overlay {
     position: absolute;
@@ -1436,7 +1455,7 @@ section.quali {
     justify-content: space-between;
 }
 
-.popup-btn {
+.visit-button {
     display: inline-block;
     /* background: crimson; */
     color: crimson;
@@ -1449,11 +1468,32 @@ section.quali {
     transition: all 0.3s ease-in-out;
     transition: background 0.3s;
 }
-.popup-btn:hover{
+.visit-button:hover{
     background-color: crimson !important;
     color: white !important;
 }
-.popup-btn:hover {
+.visit-button:hover {
+    background-color: #2980b9;
+}
+
+.visit-button2 {
+    display: inline-block;
+    /* background: crimson; */
+    color: crimson;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease-in-out;
+    transition: background 0.3s;
+}
+.visit-button2:hover{
+    background-color: crimson !important;
+    color: white !important;
+}
+.visit-button2:hover {
     background-color: #2980b9;
 }
 
@@ -1471,4 +1511,81 @@ section.quali {
 
 .popup-close-btn:hover {
     color: #3498db;
+}
+
+
+
+
+
+
+
+/* example */   
+
+/* General Styles */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.overlay {
+    padding: 10px;
+    text-align: center;
+}
+
+.view-more-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-item {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .view-more-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
 }
